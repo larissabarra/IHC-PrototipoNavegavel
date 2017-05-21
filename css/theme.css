@@ -3,12 +3,40 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  background: #8ac7e2 url('../images/bg.png') no-repeat bottom center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .navbar {
   margin-bottom: 20px;
 }
 
-#informacao-nutricional {
+#informacao-nutricional, #legenda {
   display: none;
+}
+
+.jumbotron {
+  background: #f7efdf;
+}
+
+.col-md-9 {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  border: 2px solid #fff;
+}
+
+.navbar-default {
+  background-color: #ffdd8a;
+  border-color: #fbbf2e;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  background-color: #fbbf2e;
+}
+
+#legenda {
+  max-width: 200px;
+  font-size: smaller;
 }

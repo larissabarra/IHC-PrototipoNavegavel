@@ -3,7 +3,7 @@ function clearData(nome) {
   $('#nome').html(nome);
   $('#origem').html('');
   $('#descricao').html('');
-  $('#informacao-nutricional').css('display', 'none');
+  $('#informacao-nutricional, #legenda').css('display', 'none');
 }
 $(function() {
   $('select').change(function() {
@@ -46,7 +46,7 @@ $(function() {
       $('#b2').html(alimento.b2);
       $('#niacina').html(alimento.niacina);
       $('#c').html(alimento.c);
-      $('#informacao-nutricional').css('display', 'block');
+      $('#informacao-nutricional, #legenda').css('display', 'block');
     } else {
       clearData(nome);
       $('#descricao').html('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
