@@ -1,6 +1,13 @@
 // JS aqui.
+function clearData(nome) {
+  $('#nome').html(nome);
+  $('#origem').html('');
+  $('#descricao').html('');
+  $('#informacao-nutricional').css('display', 'none');
+}
 $(function() {
   $('select').change(function() {
+    clearData('');
     var regiao = $('#regiao').val();
     var tipo = $('#tipo').val();
     var data = alimentos[regiao][tipo];
@@ -15,7 +22,7 @@ $(function() {
 
   $('select').trigger('change');
 
-  $( "a.list-group-item" ).click(function( event ) {
+  $('#list-container').on('click', 'a.list-group-item', function(event) {
     event.preventDefault();
     var regiao = $('#regiao').val();
     var tipo = $('#tipo').val();
@@ -41,10 +48,8 @@ $(function() {
       $('#c').html(alimento.c);
       $('#informacao-nutricional').css('display', 'block');
     } else {
-      $('#nome').html(nome);
-      $('#origem').html('');
+      clearData(nome);
       $('#descricao').html('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
-      $('#informacao-nutricional').css('display', 'none');
     }
   });
 });
