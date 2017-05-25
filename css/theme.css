@@ -40,3 +40,9 @@ body {
   max-width: 200px;
   font-size: smaller;
 }
+
+.scrollable-list{
+	height: auto;
+    max-height: 60vh;
+    overflow-x: hidden;
+}
