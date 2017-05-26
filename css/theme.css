@@ -46,3 +46,12 @@ body {
     max-height: 60vh;
     overflow-x: hidden;
 }
+
+#helpIcon{
+  float: right;
+}
+
+.tooltip{
+  font-size: 15px !important;
+  background: #000 !important;
+}
