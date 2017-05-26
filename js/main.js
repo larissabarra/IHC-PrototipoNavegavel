@@ -5,14 +5,18 @@ function clearData(nome) {
   $('#descricao').html('');
   $('#informacao-nutricional, #legenda').css('display', 'none');
 }
+
 $(function() {
   $('select').change(function() {
     clearData('');
     var regiao = $('#regiao').val();
     var tipo = $('#tipo').val();
     var data = alimentos[regiao][tipo];
-
+    var regiaoSelect =  $("#regiao option:selected").text();
+    var tipoSelect = $("#tipo option:selected").text();
     var items = [];
+    tipoSelect
+    items.push("<label class='list-group-item'>" + tipoSelect + " do " + regiaoSelect + "</label>");
     $.each(data, function(key, val) {
       if (val && val.nome) {
         items.push("<a href='#' data-nome='" + key + "' class='list-group-item'>" + val.nome + "</a>");

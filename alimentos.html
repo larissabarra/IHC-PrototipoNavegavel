@@ -1,168 +1,170 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>NutriCalc</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom -->
-    <link href="css/theme.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>NutriCalc</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom -->
+  <link href="css/theme.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="container">
-      <!-- Static navbar -->
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span></a>
+      <![endif]-->
+    </head>
+    <body>
+      <div class="container">
+        <!-- Static navbar -->
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Início</a></li>
+                <li class="active"><a href="alimentos.html">Alimentos</a></li>
+                <li><a class="active" href="calculadora.html">Calculadora de nutrientes</a></li>
+				<li><a  href="#" data-toggle="modal" data-target="#myModal">Ajuda</a></li>
+              </ul>
+            </div>
           </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="index.html">Início</a></li>
-              <li class="active"><a href="alimentos.html">Alimentos</a></li>
-              <li><a class="active" href="calculadora.html">Calculadora de nutrientes</a></li>
-			  <li><a  href="#" data-toggle="modal" data-target="#myModal">Ajuda</a></li>
-            </ul>
+        </nav>
+        <div class="jumbotron">
+        <h2>Alimentos produzidos no Brasil <a href="#" data-toggle="tooltip" data-placement="left" title="Primeiro selecione a Região desejada e em seguida o Tipo de Alimento para exibição." id="helpIcon"><img src="images/help.png"></a></h2>
+          <p></p>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="regiao">Região:</label>
+                <select class="form-control" id="regiao">
+                  <option value="norte">Norte</option>
+                  <option value="nordeste">Nordeste</option>
+                  <option value="sudeste">Sudeste</option>
+                  <option value="sul">Sul</option>
+                  <option value="centrooeste">Centro Oeste</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="tipo">Tipo de alimento:</label>
+                <select class="form-control" id="tipo">
+                  <option value="frutas">Frutas</option>
+                  <option value="hortaliças">Hortaliças</option>
+                  <option value="leguminosas">Leguminosas</option>
+                  <option value="tuberculos">Tubérculos</option>
+                </select>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-      <div class="jumbotron">
-        <h2>Alimentos produzidos no Brasil</h2>
-        <p></p>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="regiao">Região:</label>
-              <select class="form-control" id="regiao">
-                <option value="norte">Norte</option>
-                <option value="nordeste">Nordeste</option>
-                <option value="sudeste">Sudeste</option>
-                <option value="sul">Sul</option>
-                <option value="centrooeste">Centro Oeste</option>
-              </select>
+        <div id="list-container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="list-group scrollable-list" id="lista">
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="tipo">Tipo de alimento:</label>
-              <select class="form-control" id="tipo">
-                <option value="frutas">Frutas</option>
-                <option value="hortaliças">Hortaliças</option>
-                <option value="leguminosas">Leguminosas</option>
-                <option value="tuberculos">Tubérculos</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="list-container">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="list-group scrollable-list" id="lista">
-            </div>
-          </div>
-          <div class="col-md-9 table-responsive">
-            <h2 id="nome"></h2>
-            <h4 id="origem"></h4>
-            <p id="descricao"></p>
-            <table id="informacao-nutricional" class="table">
-              <tr>
-                <th colspan="13">Análise química em g/100g</th>
-              </tr>
-              <tr>
-                <td>Eng</td>
-                <td>Ptn</td>
-                <td>Lip</td>
-                <td>Carb</td>
-                <td>Fib</td>
-                <td>Cál</td>
-                <td>Fós</td>
-                <td>Fer</td>
-                <td>Ret</td>
-                <td>Vit B1</td>
-                <td>Vit B2</td>
-                <td>Ncn</td>
-                <td>Vit C</td>
-              </tr>
-              <tr>
-                <td id="energia"></td>
-                <td id="ptn"></td>
-                <td id="lip"></td>
-                <td id="carb"></td>
-                <td id="fibra"></td>
-                <td id="calcio"></td>
-                <td id="fosforo"></td>
-                <td id="ferro"></td>
-                <td id="retinol"></td>
-                <td id="b1"></td>
-                <td id="b2"></td>
-                <td id="niacina"></td>
-                <td id="c"></td>
-              </tr>
-            </table>
+            <div class="col-md-9 table-responsive">
+              <h2 id="nome"></h2>
+              <h4 id="origem"></h4>
+              <p id="descricao"></p>
+              <table id="informacao-nutricional" class="table">
+                <tr>
+                  <th colspan="13">Análise química em g/100g</th>
+                </tr>
+                <tr>
+                  <td>Eng</td>
+                  <td>Ptn</td>
+                  <td>Lip</td>
+                  <td>Carb</td>
+                  <td>Fib</td>
+                  <td>Cál</td>
+                  <td>Fós</td>
+                  <td>Fer</td>
+                  <td>Ret</td>
+                  <td>Vit B1</td>
+                  <td>Vit B2</td>
+                  <td>Ncn</td>
+                  <td>Vit C</td>
+                </tr>
+                <tr>
+                  <td id="energia"></td>
+                  <td id="ptn"></td>
+                  <td id="lip"></td>
+                  <td id="carb"></td>
+                  <td id="fibra"></td>
+                  <td id="calcio"></td>
+                  <td id="fosforo"></td>
+                  <td id="ferro"></td>
+                  <td id="retinol"></td>
+                  <td id="b1"></td>
+                  <td id="b2"></td>
+                  <td id="niacina"></td>
+                  <td id="c"></td>
+                </tr>
+              </table>
 
-            <table class="table table-condensed" id="legenda">
-              <tr>
-                <th colspan="2">Legenda</th>
-              </tr>
-              <tr>
-                <td>Eng</td><td>Energia (kcal)</td>
-              </tr>
-              <tr>
-                <td>Ptn</td><td>Proteínas (g)</td>
-              </tr>
-              <tr>
-                <td>Lip</td><td>Lipídios (g)</td>
-              </tr>
-              <tr>
-                <td>Carb</td><td>Carboidratos (g)</td>
-              </tr>
-              <tr>
-                <td>Fib</td><td>Fibras (g)</td>
-              </tr>
-              <tr>
-                <td>Cál</td><td>Cálcio (mg)</td>
-              </tr>
-              <tr>
-                <td>Fós</td><td>Fósforo (mg)</td>
-              </tr>
-              <tr>
-                <td>Fer</td><td>Ferro (mg)</td>
-              </tr>
-              <tr>
-                <td>Ret</td><td>Retinol (mcg)</td>
-              </tr>
-              <tr>
-                <td>Vit B1</td><td>Vitamina B1 (mg)</td>
-              </tr>
-              <tr>
-                <td>Vit B2</td><td>Vitamina B2 (mg)</td>
-              </tr>
-              <tr>
-                <td>Ncn</td><td>Niacina (mg)</td>
-              </tr>
-              <tr>
-                <td>Vit C</td><td>Vitamina C (mg)</td>
-              </tr>
-            </table>
+              <table class="table table-condensed" id="legenda">
+                <tr>
+                  <th colspan="2">Legenda</th>
+                </tr>
+                <tr>
+                  <td>Eng</td><td>Energia (kcal)</td>
+                </tr>
+                <tr>
+                  <td>Ptn</td><td>Proteínas (g)</td>
+                </tr>
+                <tr>
+                  <td>Lip</td><td>Lipídios (g)</td>
+                </tr>
+                <tr>
+                  <td>Carb</td><td>Carboidratos (g)</td>
+                </tr>
+                <tr>
+                  <td>Fib</td><td>Fibras (g)</td>
+                </tr>
+                <tr>
+                  <td>Cál</td><td>Cálcio (mg)</td>
+                </tr>
+                <tr>
+                  <td>Fós</td><td>Fósforo (mg)</td>
+                </tr>
+                <tr>
+                  <td>Fer</td><td>Ferro (mg)</td>
+                </tr>
+                <tr>
+                  <td>Ret</td><td>Retinol (mcg)</td>
+                </tr>
+                <tr>
+                  <td>Vit B1</td><td>Vitamina B1 (mg)</td>
+                </tr>
+                <tr>
+                  <td>Vit B2</td><td>Vitamina B2 (mg)</td>
+                </tr>
+                <tr>
+                  <td>Ncn</td><td>Niacina (mg)</td>
+                </tr>
+                <tr>
+                  <td>Vit C</td><td>Vitamina C (mg)</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
 	<!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
@@ -184,13 +186,22 @@
 
   </div>
 </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- informações dos alimentos -->
-    <script src="js/alimentos.js"></script>
-    <!-- Custom -->
-    <script src="js/main.js"></script>
-  </body>
-</html>
+
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="js/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
+      <!-- informações dos alimentos -->
+      <script src="js/alimentos.js"></script>
+      <!-- Custom -->
+      <script src="js/main.js"></script>
+      <script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip(); 
+        });
+      </script>
+
+    </body>
+    </html>
+
