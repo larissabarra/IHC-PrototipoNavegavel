@@ -13,11 +13,12 @@ $(function() {
     var data = alimentos[regiao][tipo];
 
     var items = [];
-    $.each( data, function( key, val ) {
-      var nome = val.nome ? val.nome : key;
-      items.push( "<a href='#' data-nome='" + key + "' class='list-group-item'>" + nome + "</a>" );
+    $.each(data, function(key, val) {
+      if (val && val.nome) {
+        items.push("<a href='#' data-nome='" + key + "' class='list-group-item'>" + val.nome + "</a>");
+      }
     });
-    $('#lista').html(items.join( "" ));
+    $('#lista').html(items.join(""));
   });
 
   $('select').trigger('change');
