@@ -24,6 +24,8 @@ $(function() {
 
     var alimento = alimentos[regiao][tipo][nome];
 
+    $('#alimentos-adicionados').append('<span class="badge">' + alimento.nome + '</span> &nbsp');
+
     var en = parseFloat($('#energia').text(), 10);
     en = $.isNumeric(en) ? en : 0;
     en += alimento.energia;
@@ -88,5 +90,23 @@ $(function() {
     c = $.isNumeric(c) ? c : 0;
     c += alimento.c;
     $('#c').html(c.toFixed(2));
+  });
+
+  $('#clear-calc').on('click', function(event) {
+    event.preventDefault();
+    $('#alimentos-adicionados').text('');
+    $('#energia').html('');
+    $('#ptn').html('');
+    $('#lip').html('');
+    $('#carb').html('');
+    $('#fibra').html('');
+    $('#calcio').html('');
+    $('#fosforo').html('');
+    $('#ferro').html('');
+    $('#retinol').html('');
+    $('#b1').html('');
+    $('#b2').html('');
+    $('#niacina').html('');
+    $('#c').html('');
   });
 });

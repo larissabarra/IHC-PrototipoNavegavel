@@ -21,7 +21,7 @@ var alimentos = {
         "c": 9
       },
       "Ajuru": {
-		"nome": "Ajuru",
+        "nome": "Ajuru",
         "origem": "Amazônia",
         "descricao": "Fruto arredondado, de cor diversificada entre o branco-creme, o rosa e o púrpura e, algumas vezes quase preto. A polpa é branca,um tanto esponjosa, às vezes adocicada.",
         "energia": 262,
@@ -37,7 +37,7 @@ var alimentos = {
         "b2": 0.01,
         "niacina": 0.4,
         "c": 9
-	  },
+      },
       "Araçá": {
         "nome": "Araçá",
         "origem": "Amazônia",
@@ -49,12 +49,13 @@ var alimentos = {
         "fibra": 5.2,
         "calcio": 48,
         "fosforo": 33,
-        "ferro":6.3,
+        "ferro": 6.3,
         "retinol": 48,
         "b1": 0.06,
         "b2": 0.04,
         "niacina": 1.3,
-        "c": 9},
+        "c": 9
+      },
       "Bacaba": {},
       "Bacuri": {},
       "Banana-pacovã": {},
@@ -89,8 +90,7 @@ var alimentos = {
       "Inajá": {},
       "Ingá": {},
       "Jambo": {},
-      "Manga": {
-	  },
+      "Manga": {},
       "Mangaba": {},
       "Maracujá": {},
       "Marajá": {},
@@ -105,8 +105,8 @@ var alimentos = {
       "Uxi": {}
     },
     "hortaliças": {
-	"Alfavaca":{
-		"nome": "Alfavaca",
+      "Alfavaca": {
+        "nome": "Alfavaca",
         "origem": "",
         "descricao": "A alfavaca é uma planta condimentar aromática muito freqüente em vários estados brasileiros. Ocorre também na África, Ásia tropical, Oriente Médio e em todo o Mediterrâneo",
         "energia": 62,
@@ -116,15 +116,15 @@ var alimentos = {
         "fibra": 5.2,
         "calcio": 48,
         "fosforo": 33,
-        "ferro":6.3,
+        "ferro": 6.3,
         "retinol": 48,
         "b1": 0.06,
         "b2": 0.04,
         "niacina": 1.3,
         "c": 9
-	},
-	"AZEDINHA":{
-		"nome": "AZEDINHA",
+      },
+      "Azedinha": {
+        "nome": "Azedinha",
         "origem": "",
         "descricao": "Planta de caule vermelho e folhas arreConhecida e utilizada desde a antigüidade, a alfavaca tem grande utilidade culinária. As folhas são usadas como condimento, pois conferem agradá- vel sabor aos molhos, sopas e carnes. No estado do Pará, é muito empregada no preparo do tucupi. O linalol, extraído das folhas, é utilizado como aromatizante pelas indústrias de bebidas, alimentos e perfumaria.",
         "energia": 62,
@@ -134,15 +134,15 @@ var alimentos = {
         "fibra": 5.2,
         "calcio": 48,
         "fosforo": 33,
-        "ferro":6.3,
+        "ferro": 6.3,
         "retinol": 48,
         "b1": 0.06,
         "b2": 0.04,
         "niacina": 1.3,
         "c": 9
-	},
-	"BERTALHA":{
-		"nome": "BERTALHA",
+      },
+      "Bertalha": {
+        "nome": "Bertalha",
         "origem": "",
         "descricao": "A procura de opções viáveis para o cultivo nos trópicos, mostrou que a bertalha pode substituir eficientemente o espinafre e o cariru",
         "energia": 62,
@@ -152,15 +152,15 @@ var alimentos = {
         "fibra": 5.2,
         "calcio": 48,
         "fosforo": 33,
-        "ferro":6.3,
+        "ferro": 6.3,
         "retinol": 48,
         "b1": 0.06,
         "b2": 0.04,
         "niacina": 1.3,
         "c": 9
-	},
-	"CARURU":{
-		"nome": "CARURU",
+      },
+      "Caruru": {
+        "nome": "Caruru",
         "origem": "",
         "descricao": "Utilizam-se as suas folhas e hastes tenras nos mesmos pratos que o espinafre, preparados de forma similar",
         "energia": 62,
@@ -170,15 +170,15 @@ var alimentos = {
         "fibra": 5.2,
         "calcio": 48,
         "fosforo": 33,
-        "ferro":6.3,
+        "ferro": 6.3,
         "retinol": 48,
         "b1": 0.06,
         "b2": 0.04,
         "niacina": 1.3,
         "c": 9
-	},
-	"COENTRO":{
-		"nome": "COENTRO",
+      },
+      "Coentro": {
+        "nome": "Coentro",
         "origem": "",
         "descricao": "No Brasil, sua importância está associada ao consumo das folhas frescas, utilizadas como condimento, principalmente no Norte e Nordeste.",
         "energia": 62,
@@ -188,13 +188,13 @@ var alimentos = {
         "fibra": 5.2,
         "calcio": 48,
         "fosforo": 33,
-        "ferro":6.3,
+        "ferro": 6.3,
         "retinol": 48,
         "b1": 0.06,
         "b2": 0.04,
         "niacina": 1.3,
         "c": 9
-	},
+      },
     },
     "leguminosas": {
 

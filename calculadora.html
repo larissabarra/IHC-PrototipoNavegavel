@@ -61,7 +61,7 @@
               <label for="tipo">Tipo de alimento:</label>
               <select class="form-control" id="tipo">
                 <option value="frutas">Frutas</option>
-                <option value="hortaliças">Hotaliças</option>
+                <option value="hortaliças">Hortaliças</option>
                 <option value="leguminosas">Leguminosas</option>
                 <option value="tuberculos">Tubérculos</option>
               </select>
@@ -83,19 +83,19 @@
                 <th colspan="13">Total adicionado</th>
               </tr>
               <tr>
-                <td>Eng</td>
-                <td>Ptn</td>
-                <td>Lip</td>
-                <td>Carb</td>
-                <td>Fib</td>
-                <td>Cál</td>
-                <td>Fós</td>
-                <td>Fer</td>
-                <td>Ret</td>
-                <td>Vit B1</td>
-                <td>Vit B2</td>
-                <td>Ncn</td>
-                <td>Vit C</td>
+                <td><strong>Eng</strong></td>
+                <td><strong>Ptn</strong></td>
+                <td><strong>Lip</strong></td>
+                <td><strong>Carb</strong></td>
+                <td><strong>Fib</strong></td>
+                <td><strong>Cál</strong></td>
+                <td><strong>Fós</strong></td>
+                <td><strong>Fer</strong></td>
+                <td><strong>Ret</strong></td>
+                <td><strong>Vit B1</strong></td>
+                <td><strong>Vit B2</strong></td>
+                <td><strong>Ncn</strong></td>
+                <td><strong>Vit C</strong></td>
               </tr>
               <tr>
                 <td id="energia"></td>
@@ -112,8 +112,16 @@
                 <td id="niacina"></td>
                 <td id="c"></td>
               </tr>
+              <tr>
+                <th colspan="13">Análise química em g/100g</th>
+              </tr>
             </table>
-
+            <button class="btn btn-default" id="clear-calc">
+              Reiniciar &nbsp
+              <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+            </button>
+            <br>
+            <br>
             <table class="table table-condensed" id="legenda">
               <tr>
                 <th colspan="2">Legenda</th>
