@@ -1,18 +1,32 @@
 // JS aqui.
+function clearData(nome) {
+  $('#nome').html(nome);
+  $('#origem').html('');
+  $('#descricao').html('');
+  $('#informacao-nutricional, #legenda').css('display', 'none');
+}
 $(function() {
-  var items = [];
+ 
+  $('select').change(function() {
+	var items = [];
+    clearData('');
+    var regiaoFiltro = $('#regiao').val();
+    var tipoFiltro = $('#tipo').val();  
   $.each( alimentos, function( regiao, dadosRegiao ) {
     $.each( dadosRegiao, function( tipo, tipoAlimento ) {
       $.each( tipoAlimento, function( key, val ) {
-        if (!$.isEmptyObject(val)) {
+        if (!$.isEmptyObject(val) && regiao == regiaoFiltro && tipo == tipoFiltro) {
           var nome = val.nome;
           items.push( "<a href='#' data-regiao='" + regiao + "' data-tipo='" + tipo + "' data-nome='" + key + "' class='list-group-item'>" + nome + "<span class='badge'>+</span></a>" );
         }
       });
     });
   });
-  $('#informacao-nutricional, #legenda').css('display', 'block');
   $('#lista').html(items.join( "" ));
+  });
+
+  $('#informacao-nutricional, #legenda').css('display', 'block');
+  
 
   $('select').trigger('change');
 
