@@ -27,7 +27,10 @@ body {
   border-radius: 5px;
   border: 2px solid #fff;
 }
-
+.row {
+     margin-right: 0px; 
+    margin-left: -15px;
+}
 .navbar-default {
   background-color: #ffdd8a;
   border-color: #fbbf2e;
