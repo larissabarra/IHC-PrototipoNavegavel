@@ -36,13 +36,14 @@
                 <li><a href="index.html">Início</a></li>
                 <li class="active"><a href="alimentos.html">Alimentos</a></li>
                 <li><a class="active" href="calculadora.html">Calculadora de nutrientes</a></li>
-				<li><a  href="#" data-toggle="modal" data-target="#myModal">Ajuda</a></li>
+                <li><a  href="#" data-toggle="modal" data-target="#myModal">Ajuda</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
               </ul>
             </div>
           </div>
         </nav>
         <div class="jumbotron">
-        <h2>Alimentos produzidos no Brasil <a href="#" data-toggle="tooltip" data-placement="left" title="Primeiro selecione a Região desejada e em seguida o Tipo de Alimento para exibição." id="helpIcon"><img src="images/help.png"></a></h2>
+          <h2>Alimentos produzidos no Brasil <a href="#" data-toggle="tooltip" data-placement="left" title="Primeiro selecione a Região desejada e em seguida o Tipo de Alimento para exibição." id="helpIcon"><img src="images/help.png"></a></h2>
           <p></p>
           <div class="row">
             <div class="col-md-6">
@@ -166,42 +167,42 @@
       </div>
 
     </div>
-	<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Ajuda</h4>
-      </div>
-      <div class="modal-body">
-        <p>Algum texto explicando o contexto da pagina.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Ajuda</h4>
+          </div>
+          <div class="modal-body">
+            <p>Algum texto explicando o contexto da pagina.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+
       </div>
     </div>
 
-  </div>
-</div>
 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- informações dos alimentos -->
+    <script src="js/alimentos.js"></script>
+    <!-- Custom -->
+    <script src="js/main.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); 
+      });
+    </script>
 
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="js/jquery.min.js"></script>
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="js/bootstrap.min.js"></script>
-      <!-- informações dos alimentos -->
-      <script src="js/alimentos.js"></script>
-      <!-- Custom -->
-      <script src="js/main.js"></script>
-      <script>
-        $(document).ready(function(){
-          $('[data-toggle="tooltip"]').tooltip(); 
-        });
-      </script>
-
-    </body>
-    </html>
+  </body>
+  </html>
 

@@ -55,3 +55,7 @@ body {
   font-size: 15px !important;
   background: #000 !important;
 }
+
+a:hover{
+  text-decoration: none;
+}
