@@ -11,7 +11,10 @@ $(function() {
 	var items = [];
     clearData('');
     var regiaoFiltro = $('#regiao').val();
-    var tipoFiltro = $('#tipo').val();  
+    var tipoFiltro = $('#tipo').val();
+    var regiaoSelect =  $("#regiao option:selected").text();
+    var tipoSelect = $("#tipo option:selected").text();
+    items.push("<label class='list-group-item'>" + tipoSelect + " do " + regiaoSelect + "</label>");
   $.each( alimentos, function( regiao, dadosRegiao ) {
     $.each( dadosRegiao, function( tipo, tipoAlimento ) {
       $.each( tipoAlimento, function( key, val ) {
