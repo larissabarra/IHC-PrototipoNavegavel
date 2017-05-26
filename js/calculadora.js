@@ -23,11 +23,11 @@ $(function() {
     });
   });
   $('#lista').html(items.join( "" ));
-  });
+  
 
   $('#informacao-nutricional, #legenda').css('display', 'block');
   
-
+});
   $('select').trigger('change');
 
   $('#list-container').on('click', 'a.list-group-item', function(event) {
